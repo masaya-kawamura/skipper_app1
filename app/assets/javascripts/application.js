@@ -14,3 +14,33 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// var title = "javascriptが使えました";
+// alert(title);
+
+// $(document).ready(function(){
+//   $('.jquery').on('click',function(){
+//     $(this).css('color','red');
+//   });
+// });
+
+$(document).ready(function(){
+  $("#theTarget").skippr({
+    //スライドショーの変化("fade" or "slide")
+    transition: 'slide',
+    //変化に係る時間（ミリ秒）
+    speed: 1000,
+    //ナビゲーションの形("block" or "bubble")
+    navType: 'block',
+    //子要素の種類
+    childrenElementType: 'div',
+    //ナビゲーション矢印の表示(trueで表示
+    arrows: true,
+    //自動再生時のスライド時間間隔（ミリ秒）
+    autoPlayDuration: 3000,
+    //キーボードの矢印キーによるスライド送りの設定（trueで有効）
+    keyboardOnAlways: true,
+    //一枚目のスライド表示時に戻る矢印を表示するかどうか（falseで非表示）
+    hideprevious: false
+  });
+});
